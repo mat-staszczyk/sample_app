@@ -1,1 +1,5 @@
-<%= render logged_in? ? 'post' : 'register' %>
+<% if logged_in? %>
+  <%= render 'shared/post' %>
+<% else %>
+  <%= render 'shared/register' %>
+<% end %>
