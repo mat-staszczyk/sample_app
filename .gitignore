@@ -25,3 +25,6 @@
 
 # Vim temp files
 *.swp
+
+# Ignore uploaded test images.
+/public/upload
