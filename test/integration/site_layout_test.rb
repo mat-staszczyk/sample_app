@@ -22,6 +22,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     get root_path
     assert_template 'static_pages/home'
+    assert_select "div.stats"
     assert_select "a[href=?]", users_path
     assert_select "a[href=?]", logout_path
     assert_select "a[href=?]", user_path(@user)
